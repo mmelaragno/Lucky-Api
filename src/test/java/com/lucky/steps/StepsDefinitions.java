@@ -31,7 +31,7 @@ public class StepsDefinitions {
 
     @Then("check the  user profile")
     public void checkTheUserProfile() {
-        ProfileConnector.getUserProfile(token);
+        ProfileConnector.getUserProfile(key,token);
 
 
 

@@ -12,8 +12,10 @@ Feature: Create an Api Key
 
     Examples:
 
-    |user              | password|
-    |UnUsuarsio23       | 123456  |
+    |user                          | password|
+    | usuarioLoquisimo1            | 12345t676  |
+    | hfewbehwew            | 12345t676  |
+
 
 
 

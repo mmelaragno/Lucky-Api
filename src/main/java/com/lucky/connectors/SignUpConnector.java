@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import static org.junit.Assert.assertEquals;
+
 public class SignUpConnector {
 
     private static final String  SIGNUP_URL = "https://www.nasable.com/luckytest/api/auth/signup?key=%s";
@@ -48,6 +50,7 @@ public class SignUpConnector {
                 .header("accept", "application/json")
                 .body(fields)
                 .asJson();
+        LOGGER.info(" ---------SIGN UP--------");
         LOGGER.info(jsonResponse.getBody().toString());
 
         switch (jsonResponse.getStatus()){
@@ -70,7 +73,7 @@ public class SignUpConnector {
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
                 break;
         }
-
+        assertEquals(jsonResponse.getStatus(), 201);
         return jsonResponse.getBody();
 
     }

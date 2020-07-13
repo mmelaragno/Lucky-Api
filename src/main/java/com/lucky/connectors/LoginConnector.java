@@ -10,6 +10,8 @@ import java.util.logging.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
+
 public class LoginConnector {
 
     private static final String  LOGIN_URL = "https://www.nasable.com/luckytest/api/auth/login?key=%s";
@@ -27,8 +29,8 @@ public class LoginConnector {
                 .header("accept", "application/json")
                 .body(fields)
                 .asJson();
+        LOGGER.info(" ---------LOGIN---------");
         LOGGER.info(jsonResponse.getBody().toString());
-        LOGGER.log(Level.INFO, "PROBANDO");
 
         switch (jsonResponse.getStatus()){
             case 200:
@@ -47,6 +49,8 @@ public class LoginConnector {
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
                 break;
         }
+
+        assertEquals(jsonResponse.getStatus(), 200);
         return jsonResponse.getBody().getObject().get("token").toString();
 
     }

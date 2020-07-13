@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 )
 
 public class Runner extends AbstractTestNGCucumberTests {
-    @DataProvider(parallel = true)
+    @DataProvider
     @Override
     public Object[][] scenarios() {
         return super.scenarios();

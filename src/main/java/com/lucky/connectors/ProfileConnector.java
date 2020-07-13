@@ -4,22 +4,26 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 import java.util.logging.Logger;
+import static org.junit.Assert.*;
 
 public class ProfileConnector {
 
 
-    private static final String  KEY_URL = "https://www.nasable.com/luckytest/api/auth/key";
+    private static final String  PROFILE_URL = "https://www.nasable.com/luckytest/api/auth/profile?key=%s";
     private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
-    public static JsonNode getUserProfile(String token) {
+    public static JsonNode getUserProfile(String key, String token) {
+        String url = String.format(PROFILE_URL, key);
+        String value = "Bearer" + " " + token;
         HttpResponse<JsonNode> jsonResponse
-                = Unirest.get(KEY_URL)
+                = Unirest.get(url)
                 .header("accept", "application/json")
-                .header("Authorization", token )
+                .header("Authorization", value)
                 .asJson();
-
+        LOGGER.info(" ---------SEE PROFILE--------");
         LOGGER.info(jsonResponse.getBody().toString());
+
         switch (jsonResponse.getStatus()){
             case 200:
                 LOGGER.info("Status is OK");
@@ -34,6 +38,7 @@ public class ProfileConnector {
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
                 break;
         }
+        assertEquals(jsonResponse.getStatus(), 200);
         return jsonResponse.getBody();
     }
 }
