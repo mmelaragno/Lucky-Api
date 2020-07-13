@@ -1,24 +1,19 @@
 package com.lucky.connectors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.lucky.connectors.com.lucky.domain.UserDTO;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class SignUpConnector {
 
     private static final String  SIGNUP_URL = "https://www.nasable.com/luckytest/api/auth/signup?key=%s";
-    private static Logger LOGGER = LogManager.getLogger();
+    private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
     public static JsonNode postSignUp(String key, String userName, String passWord) {
@@ -55,7 +50,29 @@ public class SignUpConnector {
                 .asJson();
         LOGGER.info(jsonResponse.getBody().toString());
 
+        switch (jsonResponse.getStatus()){
+            case 201:
+                LOGGER.info("Status is CREATED");
+                break;
+            case 400:
+                LOGGER.info("Status is NOT_ACCEPTED , CAUSES: Request body not valid ");
+                break;
+            case 401:
+                LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
+                break;
+            case 403:
+                LOGGER.info("Status is UNAUTHORIZED , CAUSES: Key provided not valid ");
+                break;
+            case 409:
+                LOGGER.info("Status is CONNFLICT , CAUSES: User already exists ");
+                break;
+            case 500:
+                LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
+                break;
+        }
+
         return jsonResponse.getBody();
 
     }
 }
+

@@ -3,13 +3,13 @@ package com.lucky.connectors;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import java.util.logging.Logger;
 
 public class KeyConnector {
 
     private static final String  KEY_URL = "https://www.nasable.com/luckytest/api/auth/key";
-    private static Logger LOGGER = LogManager.getLogger();
+    private static Logger LOGGER = Logger.getLogger(String.valueOf(KeyConnector.class));
 
 
     public static String getKey() {
@@ -19,6 +19,12 @@ public class KeyConnector {
                 .asJson();
 
         LOGGER.info(jsonResponse.getBody().toString());
+
+        switch (jsonResponse.getStatus()) {
+            case 200:
+                LOGGER.info("Status is OK");
+                break;
+        }
         return jsonResponse.getBody().getObject().get("key").toString();
 
     }
