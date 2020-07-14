@@ -5,10 +5,10 @@ Feature: Create an Api Key
 
   @CreateApiKey
   Scenario Outline: The user create an api key
-    Given get the api key
-    When post the key to create the user "<user>" and "<password>"
-    And post the user to login with "<user>" and "<password>"
-    Then check the  user profile
+    Given Get the api key
+    When Post the key to create the user "<user>" and "<password>"
+    And Post the user to login with "<user>" and "<password>"
+    Then Check the  user profile
 
     Examples:
 

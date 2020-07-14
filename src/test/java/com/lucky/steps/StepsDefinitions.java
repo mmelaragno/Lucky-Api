@@ -14,26 +14,24 @@ public class StepsDefinitions {
      static String key;
      static String token;
 
-    @Given("get the api key")
+    @Given("Get the api key")
     public void getTheApiKey() throws Exception {
       key =  KeyConnector.getKey();
     }
 
-    @When("post the key to create the user {string} and {string}")
+    @When("Post the key to create the user {string} and {string}")
     public void postTheKeyToCreateTheUser(String user, String pass) {
         SignUpConnector.postSignUp(key, user, pass);
     }
 
-    @And("post the user to login with {string} and {string}")
+    @And("Post the user to login with {string} and {string}")
     public void postTheUserToLogin(String user, String pass) {
     token = LoginConnector.postLogin(key,user,pass);
     }
 
-    @Then("check the  user profile")
+    @Then("Check the  user profile")
     public void checkTheUserProfile() {
         ProfileConnector.getUserProfile(key,token);
-
-
 
     }
 }
