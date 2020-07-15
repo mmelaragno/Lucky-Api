@@ -1,10 +1,9 @@
 package com.lucky.connectors;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.lucky.domain.LoginDTO;
 import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import java.util.HashMap;
@@ -17,22 +16,22 @@ public class LoginConnector {
     private static final String  LOGIN_URL = "https://www.nasable.com/luckytest/api/auth/login?key=%s";
     private static Logger LOGGER = Logger.getLogger(String.valueOf(LoginConnector.class));
 
-    public static String postLogin(String key, String userName, String passWord) {
+    public static String postLogin(String key, String userName, String passWord) throws JsonProcessingException {
         String url = String.format(LOGIN_URL, key);
 
         Map<String, Object> fields = new HashMap<>();
         fields.put("username", userName);
         fields.put("password", passWord);
 
-        HttpResponse<JsonNode> jsonResponse
+        HttpResponse<LoginDTO> response
                 = Unirest.post(url)
                 .header("accept", "application/json")
                 .body(fields)
-                .asJson();
+                .asObject(LoginDTO.class);
         LOGGER.info(" ---------LOGIN---------");
-        LOGGER.info(jsonResponse.getBody().toString());
+        LOGGER.info(response.getBody().toString());
 
-        switch (jsonResponse.getStatus()){
+        switch (response.getStatus()){
             case 200:
                 LOGGER.info("Status is OK");
               break;
@@ -50,8 +49,8 @@ public class LoginConnector {
                 break;
         }
 
-        assertEquals(jsonResponse.getStatus(), 200);
-        return jsonResponse.getBody().getObject().get("token").toString();
+        assertEquals(response.getStatus(), 200);
 
+        return response.getBody().getToken();
     }
 }

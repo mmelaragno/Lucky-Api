@@ -4,7 +4,6 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 import java.util.logging.Logger;
-import static org.junit.Assert.*;
 
 public class ProfileConnector {
 
@@ -13,7 +12,7 @@ public class ProfileConnector {
     private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
-    public static JsonNode getUserProfile(String key, String token) {
+    public static boolean getUserProfile(String key, String token) {
         String url = String.format(PROFILE_URL, key);
         String value = "Bearer" + " " + token;
         HttpResponse<JsonNode> jsonResponse
@@ -27,18 +26,14 @@ public class ProfileConnector {
         switch (jsonResponse.getStatus()){
             case 200:
                 LOGGER.info("Status is OK");
-                break;
+            return true;
             case 401:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
-                break;
             case 403:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Key provided not valid ");
-                break;
             case 500:
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
-                break;
         }
-        assertEquals(jsonResponse.getStatus(), 200);
-        return jsonResponse.getBody();
+        return false;
     }
 }

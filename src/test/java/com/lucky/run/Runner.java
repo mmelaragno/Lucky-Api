@@ -1,5 +1,6 @@
 package com.lucky.run;
 
+import com.lucky.configurations.ObjectMapperConfiguration;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.DataProvider;
@@ -15,9 +16,10 @@ import org.testng.annotations.DataProvider;
 
 
 public class Runner extends AbstractTestNGCucumberTests {
-    @DataProvider
+    @DataProvider()
     @Override
     public Object[][] scenarios() {
+        ObjectMapperConfiguration.initUnirest();
         return super.scenarios();
     }
 

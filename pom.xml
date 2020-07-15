@@ -142,7 +142,12 @@
             <artifactId>cucumber-junit</artifactId>
             <version>4.2.0</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.konghq/unirest-objectmapper-jackson -->
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-objectmapper-jackson</artifactId>
+            <version>3.7.04</version>
+        </dependency>
     </dependencies>
 
 </project>
