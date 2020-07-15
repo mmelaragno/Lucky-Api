@@ -4,6 +4,7 @@ package com.lucky.domain;
 public class LoginDTO  {
 
     private String token;
+    private UserDTO user;
 
     public LoginDTO(String token) {
         this.token = token;
@@ -18,6 +19,14 @@ public class LoginDTO  {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public UserDTO getUser() {
+        return user;
+    }
+
+    public void setUser(UserDTO user) {
+        this.user = user;
     }
 
     @Override
