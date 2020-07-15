@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
         features = {"src/test/resources/features/CreateApikey.feature"},
         plugin = {"json:target/cucumber.json","html:target/site/cucumber-pretty"},
         glue ={"com.lucky.steps"},
-        tags = {"@CreateApiKey"},
+        tags = {"@CreateUser"},
         monochrome = true,
         strict = true
 )
