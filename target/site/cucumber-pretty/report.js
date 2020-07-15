@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/CreateApikey.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/CreateUser.feature");
 formatter.feature({
-  "name": "Create an Api Key",
+  "name": "Create a user with his profile",
   "description": "     As a user\n     I want to create an Api Key and attach it to each call",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
 formatter.scenarioOutline({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -140,12 +140,12 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -190,12 +190,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -240,12 +240,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -290,12 +290,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -340,12 +340,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -367,7 +367,7 @@ formatter.match({
   "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User1 e\" and \"12345t676\"(src/test/resources/features/CreateApikey.feature:8)\n",
+  "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User1 e\" and \"12345t676\"(src/test/resources/features/CreateUser.feature:8)\n",
   "status": "failed"
 });
 formatter.step({
@@ -391,12 +391,12 @@ formatter.result({
   "status": "skipped"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -441,12 +441,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -491,12 +491,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -541,12 +541,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -591,12 +591,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -641,12 +641,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -691,12 +691,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -718,7 +718,7 @@ formatter.match({
   "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User2 234\" and \"12345t676\"(src/test/resources/features/CreateApikey.feature:8)\n",
+  "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User2 234\" and \"12345t676\"(src/test/resources/features/CreateUser.feature:8)\n",
   "status": "failed"
 });
 formatter.step({
@@ -742,12 +742,12 @@ formatter.result({
   "status": "skipped"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -792,12 +792,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -842,12 +842,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
@@ -892,12 +892,12 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "The user create an api key",
+  "name": "The user create his profile , user and password",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreateApiKey"
+      "name": "@CreateUser"
     }
   ]
 });
