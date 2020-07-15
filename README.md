@@ -26,16 +26,27 @@ Examples:
 
 # Project Structure
     ├── main
+    
     |    ├── java
     |        ├── com
-    |            ├── lucky
-    |                ├── connectors
-    |                   ├── mapiautomation                    
-    |                       ├── connectors  
+    |            ├── lucky                       
+    |                   ├── configurations  
+    |                               ├── ObjectMapperConfiguration: ObjectMapper provides functionality for reading and writing JSON
+    |                            
+    |    ├── java
+    |        ├── com
+    |            ├── lucky                       
+    |                   ├── connectors  
     |                               ├── KeyConnector:Returns an API key. Key is always required for all other endpoints.
     |                               ├── SignUpConnector:Creates user given username and password.
     |                               ├── LoginConnector:Returns token and user profile given username and password.
     |                               ├── ProfileConnector:Returns token and user profile given a valid token.
+    |   ├── java
+    |        ├── com
+    |            ├── lucky                       
+    |                   ├── domain  
+    |                               ├── KeyDTO 
+    |                               ├── LoginDTO
     |                            
     |
     ├── test 
@@ -58,6 +69,8 @@ Examples:
 # How to Run
 
 To run the battery of tests enter the Runner and play class. If I had other tests to run, I can identify them with a tag in that same class. Now the tag @CreateUser is set.
+# How to see in console
+
 
 # How to see the report
 In the Intellij terminal run "mvn verify". Then check the folder "Target"> cucumber-html-reports> cucumber-html-reports> Open with a browser the file that begins with "report-feature_XXXXX.html". You will see a very complete report with the failures, successes and statistics of each test. In the following image you will see an example
@@ -67,8 +80,8 @@ In the Intellij terminal run "mvn verify". Then check the folder "Target"> cucum
 Verify that the report contains the Fatures, Tags, Steps and Failures tabs. I invite you to check each one of them. It is very interesting the information it provides in the future you can take metrics from there
 
 # Bugs
- 1- The same users can be created with the same passwords multiple times and it never throws an error for example: "The user already exists", I would have liked to verify it in a database.
- 2-Does not accept multiple requests
+
+
  
  
 # Improvements
