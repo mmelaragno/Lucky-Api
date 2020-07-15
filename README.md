@@ -47,6 +47,7 @@ Examples:
     |                   ├── domain  
     |                               ├── KeyDTO 
     |                               ├── LoginDTO
+    |                               ├── UserDTO
     |                            
     |
     ├── test 
