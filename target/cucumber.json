@@ -1,0 +1,1352 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 15,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2593905975,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 371846564,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 44
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 206688923,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 40
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 306855394,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 295297216,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 306728522,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 44
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 309530080,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 40
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 306972586,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 305753992,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 332573549,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1a\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1a\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 280130901,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1a\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1a\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 215230813,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 294728602,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 308828809,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2d\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2d\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 307296746,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2d\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2d\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 385495185,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 443076189,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User1 e\" and \"12345t676\"(src/test/resources/features/CreateApikey.feature:8)\n",
+              "duration": 208265907,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1 e\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1 e\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23039,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1 e\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1 e\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21815,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1048113831,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 255247825,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2s\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2s\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 308155289,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2s\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2s\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 202818257,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 304933071,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 206068206,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1aa\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1aa\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 305882113,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1aa\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1aa\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 207442116,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 320788980,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 289604488,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2xx\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2xx\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 205074119,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2xx\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2xx\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 308184586,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 302877169,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 198622086,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User145\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User145\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312672903,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User145\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User145\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 206282522,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 304081580,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 204472324,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2t34\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2t34\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 313310585,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2t34\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2t34\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 226070165,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 278921159,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 305732477,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1a**\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1a**\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 216256329,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1a**\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1a**\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 297439803,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 305564743,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat com.lucky.connectors.SignUpConnector.postSignUp(SignUpConnector.java:76)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUser(StepsDefinitions.java:25)\n\tat ✽.Post the key to create the user \"User2 234\" and \"12345t676\"(src/test/resources/features/CreateApikey.feature:8)\n",
+              "duration": 308261042,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2 234\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2 234\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5791,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2 234\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2 234\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 44
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4424,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1020460872,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 304533173,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User112\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User112\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 197503427,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User112\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User112\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 214017017,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 310554902,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 300340311,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2234\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2234\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 309855742,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2234\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2234\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 306005576,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;16",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 307458963,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 305097101,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User122222\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User122222\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 49
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 203468056,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User122222\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User122222\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 204406695,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "The user create an api key",
+        "description": "",
+        "id": "create-an-api-key;the-user-create-an-api-key;;17",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 205205299,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 305331522,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User2Hello\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2Hello\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 49
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 206726553,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User2Hello\" and \"12345t676\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User2Hello\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"12345t676\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 203525236,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the  user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateApiKey"
+          }
+        ]
+      }
+    ],
+    "name": "Create an Api Key",
+    "description": "     As a user\n     I want to create an Api Key and attach it to each call",
+    "id": "create-an-api-key",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/CreateApikey.feature",
+    "tags": [
+      {
+        "name": "@CreateApiKey",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

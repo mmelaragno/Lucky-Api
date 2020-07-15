@@ -1,0 +1,6 @@
+com/lucky/connectors/KeyConnector.class
+com/lucky/connectors/SignUpConnector.class
+com/lucky/connectors/ProfileConnector.class
+com/lucky/connectors/LoginConnector.class
+com/lucky/connectors/SignUpConnector$1.class
+com/lucky/connectors/com/lucky/domain/UserDTO.class
