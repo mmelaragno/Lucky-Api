@@ -18,7 +18,7 @@ public class SignUpConnector {
     public static Boolean postSignUp(String key, String userName, String passWord) throws JsonProcessingException {
         String url = String.format(SIGNUP_URL,key);
         Map<String, Object> fields = new HashMap<>();
-        fields.put("username", userName);
+        fields.put("username",  userName);
         fields.put("password", passWord);
 
         HttpResponse<JsonNode> response
@@ -35,12 +35,16 @@ public class SignUpConnector {
                 return true;
             case 400:
                 LOGGER.info("Status is NOT_ACCEPTED , CAUSES: Request body not valid ");
+                break;
             case 401:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
+                break;
             case 403:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Key provided not valid ");
+                break;
             case 409:
                 LOGGER.info("Status is CONNFLICT , CAUSES: User already exists ");
+                break;
             case 500:
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
 

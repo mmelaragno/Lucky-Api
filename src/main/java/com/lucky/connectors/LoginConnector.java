@@ -16,7 +16,7 @@ public class LoginConnector {
     private static final String  LOGIN_URL = "https://www.nasable.com/luckytest/api/auth/login?key=%s";
     private static Logger LOGGER = Logger.getLogger(String.valueOf(LoginConnector.class));
 
-    public static String postLogin(String key, String userName, String passWord) throws JsonProcessingException {
+    public static String postLogin(String key, String userName, String passWord) {
         String url = String.format(LOGIN_URL, key);
 
         Map<String, Object> fields = new HashMap<>();
@@ -29,6 +29,7 @@ public class LoginConnector {
                 .body(fields)
                 .asObject(LoginDTO.class);
         LOGGER.info(" ---------LOGIN---------");
+        LOGGER.info(response.getBody().getUser().getId());
         LOGGER.info(response.getBody().toString());
 
         switch (response.getStatus()){

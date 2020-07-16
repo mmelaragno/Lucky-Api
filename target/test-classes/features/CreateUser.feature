@@ -11,14 +11,15 @@ Feature: Create a user with his profile
 
     Examples:
 
-    |user              | password   |
-    | User1            | 12345t676  |
-    | User1            | 12345t676  |
-    | User1            | 12345t676  |
-    | User1            | 12345t676  |
-    | User1            | 12345t676  |
-
-
+    |  user              |      password    |
+    |  User              |      222222      |
+#    |  User1             |      222222      |
+#    |  User a            |      222222      |
+#    |  User1!            |      222222      |
+#    |  1!                |      222222      |
+#    |                    |      222222      |
+#    |   222222           |                  |
+#    |                    |                  |
 
 
 

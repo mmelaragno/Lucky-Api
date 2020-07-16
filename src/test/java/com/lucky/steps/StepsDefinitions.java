@@ -26,6 +26,7 @@ public class StepsDefinitions {
 
     @When("Post the key to create the user {string} and {string}")
     public void postTheKeyToCreateTheUser(String user, String pass) throws JsonProcessingException {
+       // Boolean validateUser(user);
         Boolean signUpOk = SignUpConnector.postSignUp(key, user, pass);
         assertEquals(signUpOk, true);
     }
