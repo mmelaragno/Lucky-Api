@@ -13,7 +13,8 @@ Code Challenge
 # Technical decisions
 I choose the cucumber tool to define the test steps as it provides a simple language to read and write.
 In this structure it is easier to be able to run several tests that use the same steps but with different parameters. In this case the username and password 
-Cucumber allows to run the tests in parallel, this possibility can be set in the "Runner" class ( Example : @DataProvider(parallel = true) .But in this case it does not accept parallel request, so it would report it as a bug since many users may be creating their profile at the same time. In the code you will see all the possible combinations that can be given according to the specifications of the requirement.The tests run sequentially
+Cucumber allows to run the tests in parallel, this possibility can be set in the "Runner" class ( Example : @DataProvider(parallel = true) .But in this case it is not possible due to the architecture of the project, but it is important for a regression tests.I understand that it is not a bug, but rather an architectural decision to test in this context
+In the code you will see all the possible combinations that can be given according to the specifications of the requirement.The tests run sequentially
 If you want to add other tests with other input parameters (user, password), you can add them in the class CreateUser.feature and run
 
 Examples:
@@ -83,7 +84,8 @@ Verify that the report contains the Fatures, Tags, Steps and Failures tabs. I in
 # Bugs
 - The type of username and password is "number", but it turns out that if I only pass number to it in the body of the request the tests fails. But on the other hand there is a note that says:
 "Username constrain -> first charachter is letter, contains at least one number and doesnt contain spaces" this note does not match the type mentioned above, so I also consider it a bug.
-- The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document.
+ 
+ NOTE: The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document. It is not a bug, but it does not match the document. I recommend updating it
 
 # Work breakdown structure
 In this project you will find the document wbs.xlsx.In the WBS diagram tab you will see the project tasks and the WBS hours tab, the hour estimate of each task.
