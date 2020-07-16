@@ -86,7 +86,7 @@ Verify that the report contains the Fatures, Tags, Steps and Failures tabs. I in
 - The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document.
 
 # Work breakdown structure
-In this project you will find the document wbs.xlsx. 
+In this project you will find the document wbs.xlsx.In the WBS diagram tab you will see the project tasks and the WBS hours tab, the hour estimate of each task.
 
 # Improvements
 Things I wish to add (If I have more time) for a complete test suite
