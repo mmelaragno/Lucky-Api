@@ -93,6 +93,7 @@ Things I wish to add (If I have more time) for a complete test suite
 - Prepare the environment to run them in continuous integration (Example: Jenkins, CircleCi, etc)
 - Add more Validations
 - Separating the definition of the steps is good practice when the test is larger or there are multiple steps. Where they can be grouped by type of testing.  In this case the test to separate the code was very short.
+- Add handler methods of Unirest, that can be chained to deal with success and failure.
 
 
 
