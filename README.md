@@ -13,7 +13,8 @@ Code Challenge
 # Technical decisions
 I choose the Cucumber tool to define the test steps as it provides a simple language to read and write.
 In this structure it is easier to be able to run several tests that use the same steps but with different parameters. In this case the username and password 
-Cucumber allows to run the tests in parallel, this possibility can be set in the "Runner" class ( Example : @DataProvider(parallel = true) .But in this case it is not possible due to the architecture of the project, but it is important for a regression tests.I understand that it is not a bug, but rather an architectural decision to test in this context
+Cucumber allows to run the tests in parallel, this possibility can be set in the "Runner" class ( Example : @DataProvider(parallel = true) ) .But in this case it is not possible due to the architecture of the project, but it is important for a regression tests.I understand that it is not a bug, but rather an architectural decision to test in this context.
+
 In the code you will see all the possible combinations that can be given according to the specifications of the requirement.The tests run sequentially
 If you want to add other tests with other input parameters (user, password), you can add them in the class CreateUser.feature and run
 
