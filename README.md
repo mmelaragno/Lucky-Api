@@ -85,14 +85,17 @@ Verify that the report contains the Fatures, Tags, Steps and Failures tabs. I in
 "Username constrain -> first charachter is letter, contains at least one number and doesnt contain spaces" this note does not match the type mentioned above, so I also consider it a bug.
 - The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document.
 
+# Work breakdown structure
+In this project you will find the document wbs.xlsx.In the WBS diagram tab you will see the project tasks and the WBS hours tab, the hour estimate of each task.
+
 # Improvements
 Things I wish to add (If I have more time) for a complete test suite
 - Prepare the environment to run them in continuous integration (Example: Jenkins, CircleCi, etc)
 - Add more Validations
 - Separating the definition of the steps is good practice when the test is larger or there are multiple steps. Where they can be grouped by type of testing.  In this case the test to separate the code was very short.
+- Add handler methods of Unirest, that can be chained to deal with success and failure.
 
-# Work breakdown structure
-In this project you will find the document wbs.xlsx
+
 
 
 
