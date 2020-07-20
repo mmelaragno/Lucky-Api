@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -11,14 +12,14 @@ import java.util.logging.Logger;
 
 public class SignUpConnector {
 
-    private static final String  SIGNUP_URL = "https://www.nasable.com/luckytest/api/auth/signup?key=%s";
+    private static final String SIGNUP_URL = "https://www.nasable.com/luckytest/api/auth/signup?key=%s";
     private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
     public static Boolean postSignUp(String key, String userName, String passWord) throws JsonProcessingException {
-        String url = String.format(SIGNUP_URL,key);
+        String url = String.format(SIGNUP_URL, key);
         Map<String, Object> fields = new HashMap<>();
-        fields.put("username",  userName);
+        fields.put("username", userName);
         fields.put("password", passWord);
 
         HttpResponse<JsonNode> response
@@ -26,10 +27,11 @@ public class SignUpConnector {
                 .header("accept", "application/json")
                 .body(fields)
                 .asJson();
+        Unirest.shutDown();
         LOGGER.info(" ---------SIGN UP--------");
         LOGGER.info(response.getBody().toString());
 
-        switch (response.getStatus()){
+        switch (response.getStatus()) {
             case 201:
                 LOGGER.info("Status is CREATED");
                 return true;
@@ -49,6 +51,7 @@ public class SignUpConnector {
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
 
         }
+
         return false;
 
     }

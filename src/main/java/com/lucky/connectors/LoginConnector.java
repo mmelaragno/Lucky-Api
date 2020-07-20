@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.lucky.domain.LoginDTO;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
+
 import java.util.logging.Logger;
 
 import java.util.HashMap;
@@ -13,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class LoginConnector {
 
-    private static final String  LOGIN_URL = "https://www.nasable.com/luckytest/api/auth/login?key=%s";
+    private static final String LOGIN_URL = "https://www.nasable.com/luckytest/api/auth/login?key=%s";
     private static Logger LOGGER = Logger.getLogger(String.valueOf(LoginConnector.class));
 
     public static String postLogin(String key, String userName, String passWord) {
@@ -28,20 +29,21 @@ public class LoginConnector {
                 .header("accept", "application/json")
                 .body(fields)
                 .asObject(LoginDTO.class);
+        Unirest.shutDown();
         LOGGER.info(" ---------LOGIN---------");
         LOGGER.info(response.getBody().getUser().getId());
         LOGGER.info(response.getBody().toString());
 
-        switch (response.getStatus()){
+        switch (response.getStatus()) {
             case 200:
                 LOGGER.info("Status is OK");
-              break;
+                break;
             case 400:
                 LOGGER.info("Status is NOT_ACCEPTED  , CAUSES: Request body not valid ");
-               break;
+                break;
             case 401:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
-               break;
+                break;
             case 403:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Key provided not valid ");
                 break;

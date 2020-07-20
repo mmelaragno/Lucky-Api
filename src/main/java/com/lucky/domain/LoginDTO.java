@@ -1,7 +1,7 @@
 package com.lucky.domain;
 
 
-public class LoginDTO  {
+public class LoginDTO {
 
     private String token;
     private UserDTO user;

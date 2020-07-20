@@ -3,13 +3,15 @@ package com.lucky.connectors;
 import com.lucky.domain.KeyDTO;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
+
 import java.io.IOException;
 import java.util.logging.Logger;
+
 import static org.junit.Assert.assertEquals;
 
 public class KeyConnector {
 
-    private static final String  KEY_URL = "https://www.nasable.com/luckytest/api/auth/key";
+    private static final String KEY_URL = "https://www.nasable.com/luckytest/api/auth/key";
     private static Logger LOGGER = Logger.getLogger(String.valueOf(KeyConnector.class));
 
 
@@ -18,6 +20,7 @@ public class KeyConnector {
                 = Unirest.get(KEY_URL)
                 .header("accept", "application/json")
                 .asObject(KeyDTO.class);
+        Unirest.shutDown();
 
         LOGGER.info(" ---------GETTING THE KEY---------");
 

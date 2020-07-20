@@ -16,29 +16,28 @@ import static org.junit.Assert.assertEquals;
 
 
 public class StepsDefinitions {
-     static String key;
-     static String token;
+    static String key;
+    static String token;
 
     @Given("Get the api key")
     public void getTheApiKey() throws IOException {
-      key =  KeyConnector.getKey();
+        key = KeyConnector.getKey();
     }
 
     @When("Post the key to create the user {string} and {string}")
     public void postTheKeyToCreateTheUser(String user, String pass) throws JsonProcessingException {
-       // Boolean validateUser(user);
         Boolean signUpOk = SignUpConnector.postSignUp(key, user, pass);
         assertEquals(signUpOk, true);
     }
 
     @And("Post the user to login with {string} and {string}")
     public void postTheUserToLogin(String user, String pass) throws JsonProcessingException {
-    token = LoginConnector.postLogin(key,user,pass);
+        token = LoginConnector.postLogin(key, user, pass);
     }
 
     @Then("Check the user profile")
     public void checkTheUserProfile() {
-       Boolean userProfileOk = ProfileConnector.getUserProfile(key,token);
-         assertEquals(userProfileOk, true);
+        Boolean userProfileOk = ProfileConnector.getUserProfile(key, token);
+        assertEquals(userProfileOk, true);
     }
 }

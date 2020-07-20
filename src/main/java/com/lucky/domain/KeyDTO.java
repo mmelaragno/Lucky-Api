@@ -1,6 +1,6 @@
 package com.lucky.domain;
 
-public class KeyDTO  {
+public class KeyDTO {
 
     private String key;
 

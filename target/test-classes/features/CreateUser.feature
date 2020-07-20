@@ -10,16 +10,13 @@ Feature: Create a user with his profile
     Then Check the user profile
 
     Examples:
-
     |  user              |      password    |
     |  User              |      222222      |
-#    |  User1             |      222222      |
-#    |  User a            |      222222      |
-#    |  User1!            |      222222      |
-#    |  1!                |      222222      |
-#    |                    |      222222      |
-#    |   222222           |                  |
-#    |                    |                  |
-
-
+    |  User1             |      222222      |
+    |  User a            |      222222      |
+    |  User1!            |      222222      |
+    |  1!                |      222222      |
+    |                    |      222222      |
+    |   222222           |                  |
+    |                    |                  |
 
