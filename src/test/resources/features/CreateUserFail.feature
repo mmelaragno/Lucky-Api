@@ -13,7 +13,7 @@
       |  User1 a             |      222222      |
       |  User                |      222222      |
 
-    #The user is incorrect because he does not have the required characters.
+    #The second user is incorrect because he does not have the required characters.
      # The user must have their first character with a letter, at least a number and must not contain spaces.
       # The test fails because this validation is not being done.
 

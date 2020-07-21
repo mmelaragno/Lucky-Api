@@ -3,16 +3,16 @@
     "line": 2,
     "elements": [
       {
-        "line": 13,
-        "name": "The user create his profile",
+        "line": 14,
+        "name": "The user create his profile , user and password",
         "description": "",
-        "id": "create-a-user-with-his-profile;the-user-create-his-profile;;2",
+        "id": "create-a-user-with-his-profile;the-user-create-his-profile---user-and-password;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1754473321,
+              "duration": 1587547206,
               "status": "passed"
             },
             "line": 7,
@@ -24,7 +24,193 @@
           },
           {
             "result": {
-              "duration": 891910322,
+              "duration": 864183691,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User1\" and \"222222\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"222222\"",
+                  "offset": 44
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 938221797,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User1\" and \"222222\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User1\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"222222\"",
+                  "offset": 40
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 822546620,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "The user create his profile , user and password",
+        "description": "",
+        "id": "create-a-user-with-his-profile;the-user-create-his-profile---user-and-password;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 919099417,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 818870479,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Post the key to create the user \"User12a\" and \"222222a\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User12a\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"222222a\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepsDefinitions.postTheKeyToCreateTheUser(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 787205421,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Post the user to login with \"User12a\" and \"222222a\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User12a\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"222222a\"",
+                  "offset": 42
+                }
+              ],
+              "location": "StepsDefinitions.postTheUserToLogin(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 851442474,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Check the user profile",
+            "match": {
+              "location": "StepsDefinitions.checkTheUserProfile()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      }
+    ],
+    "name": "Create a user with his profile",
+    "description": "     As a user\n     I want to create an Api Key and attach it to each call",
+    "id": "create-a-user-with-his-profile",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/CreateUser.feature",
+    "tags": [
+      {
+        "name": "@CreateUser",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 13,
+        "name": "The user create his profile",
+        "description": "",
+        "id": "create-a-user-with-his-profile;the-user-create-his-profile;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1023712312,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get the api key",
+            "match": {
+              "location": "StepsDefinitions.getTheApiKey()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 786307754,
               "status": "passed"
             },
             "line": 8,
@@ -61,7 +247,7 @@
         "steps": [
           {
             "result": {
-              "duration": 834467472,
+              "duration": 851700273,
               "status": "passed"
             },
             "line": 7,
@@ -74,7 +260,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError: expected:\u003ctrue\u003e but was:\u003cfalse\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat com.lucky.steps.Validations.validateUser(Validations.java:15)\n\tat com.lucky.steps.StepsDefinitions.postTheKeyToCreateTheUserAndAndValidate(StepsDefinitions.java:46)\n\tat ✽.Post the key to create the user fail \"User\" and \"222222\" and validate(src/test/resources/features/CreateUserFail.feature:8)\n",
-              "duration": 818277562,
+              "duration": 818060743,
               "status": "failed"
             },
             "line": 8,
