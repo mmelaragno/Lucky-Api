@@ -3,14 +3,17 @@ Code Challenge
 
 # Requirements
      -Maven
-     -Cucumber
+     -Cucumber [More information] (https://cucumber.io/)
      -Cucumber for java
+     -Java
      -TestNG
      -Junit
      -Preferably use intellij
      -Chrome (for the report)
      
 # Technical decisions
+
+To develop I use Java language, as it is appropriate for this type of tests.
 I choose the Cucumber tool to define the test steps as it provides a simple language to read and write.
 In this structure it is easier to be able to run several tests that use the same steps but with different parameters. In this case the username and password 
 Cucumber allows to run the tests in parallel, this possibility can be set in the "Runner" class ( Example : @DataProvider(parallel = true) ) .But in this case it is not possible due to the architecture of the project, but it is important for a regression tests.I understand that it is not a bug, but rather an architectural decision to test in this context.
