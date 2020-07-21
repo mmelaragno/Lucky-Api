@@ -3,15 +3,13 @@ package com.lucky.run;
 import com.lucky.configurations.ObjectMapperConfiguration;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import kong.unirest.Unirest;
-import org.junit.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = {"src/test/resources/features/CreateUser.feature"},
+        features = {"src/test/resources/features"},
         plugin = {"json:target/cucumber.json", "html:target/site/cucumber-pretty"},
         glue = {"com.lucky.steps"},
-        tags = {"@CreateUser"},
+        tags = {"@ValidateUsersSignUp"},
         monochrome = true,
         strict = true
 )

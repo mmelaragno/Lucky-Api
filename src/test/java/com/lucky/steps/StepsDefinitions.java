@@ -40,4 +40,9 @@ public class StepsDefinitions {
         Boolean userProfileOk = ProfileConnector.getUserProfile(key, token);
         assertEquals(userProfileOk, true);
     }
+
+    @Then("Post the key to create the user fail {string} and {string} and validate")
+    public void postTheKeyToCreateTheUserAndAndValidate(String user, String password) throws JsonProcessingException {
+    Validations.validateUser(user, password, key);
+    }
 }
