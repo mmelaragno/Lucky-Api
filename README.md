@@ -63,13 +63,18 @@ Examples:
     |            ├── lucky
     |                ├── steps
     |                   ├── StepsDefinitions: Class where each step of the test is defined
+    |                   ├── Validations: Class that validates the requirements for the user format.
     ├── test 
     |    ├── resources
     |        ├── features
-    |            ├── CreateUser.feature:Declaration of the test and its steps. There are also the examples
-    |          
+    |            ├── CreateUser.feature:nThe test performs all the steps so that the user can sign up, login and see his profile.
+    |            ├── CreateUserFail.feature:This is the negative case, it validates that a user has their username correct with the requested characters.
+    |  
+    
+    
 # How to Run
-To run the battery of tests enter the Runner and play class. If I had other tests to run, I can identify them with a tag in that same class. Now the tag @CreateUser is set.
+To run the battery of tests enter the Runner and play class. If I had other tests to run, I can identify them with a tag in that same class. Now the tag @CreateUser and @ValidateUsersSignUp is set. 
+If you want to run the tests separately you can do them by setting a single tag
 
 # How to see in console
 You will see the following information on the Intellij console
@@ -82,11 +87,14 @@ In the Intellij terminal run "mvn verify". Then check the folder "Target"> cucum
 
 Verify that the report contains the Fatures, Tags, Steps and Failures tabs. I invite you to check each one of them. It is very interesting the information it provides in the future you can take metrics from there
 
-# Bugs
-- The type of username and password is "number", but it turns out that if I only pass number to it in the body of the request the tests fails. But on the other hand there is a note that says:
-"Username constrain -> first charachter is letter, contains at least one number and doesnt contain spaces" this note does not match the type mentioned above, so I also consider it a bug.
- 
- NOTE: The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document. It is not a bug, but it does not match the document. I recommend updating it
+# Bugs (Ordered from highest to lowest importance)
+
+- In the requirements it says "Username constrain -> first charachter is letter, contains at least one number and doesnt contain spaces". This case is tested in the @ValidateUsersSignUp test and fails. This is not being validated on the endpoint, so it is reported as a bug.
+
+- The type of username and password is "number", but it turns out that if I only pass number to it in the body of the request the tests fails. But on the other hand there is a note that says: "Username constrain -> first charachter is letter, contains at least one number and doesnt contain spaces". 
+So there is no match in the document.
+
+ NOTE: The ok status code of [GET] / api / auth / key is always 201, not 200 as detailed in the document. It is not a bug, but it does not match the document. I recommend updating it. 
 
 # Work breakdown structure
 In this project you will find the document wbs.xlsx.In the WBS diagram tab you will see the project tasks and the WBS hours tab, the hour estimate of each task.
