@@ -12,7 +12,7 @@ public class ProfileConnector {
     private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
-    public static boolean getUserProfile(String key, String token) {
+    public static String getUserProfile(String key, String token) {
         String url = String.format(PROFILE_URL, key);
         String value = "Bearer" + " " + token;
         HttpResponse<JsonNode> jsonResponse
@@ -27,7 +27,7 @@ public class ProfileConnector {
         switch (jsonResponse.getStatus()) {
             case 200:
                 LOGGER.info("Status is OK");
-                return true;
+             break;
             case 401:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
                 break;
@@ -38,6 +38,6 @@ public class ProfileConnector {
                 LOGGER.info("Status is INTERNAL_SERVER_ERROR , CAUSES: Server side error");
                 break;
         }
-        return false;
+        return String.valueOf(jsonResponse.getStatus());
     }
 }

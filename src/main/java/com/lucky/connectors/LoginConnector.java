@@ -41,7 +41,7 @@ public class LoginConnector {
                 return response.getBody().getToken();
             case 400:
                 LOGGER.info("Status is NOT_ACCEPTED  , CAUSES: Request body not valid ");
-                break;
+               break;
             case 401:
                 LOGGER.info("Status is UNAUTHORIZED , CAUSES: Token provided not valid ");
                 break;
@@ -54,7 +54,6 @@ public class LoginConnector {
         }
 
 
-
-        return "Token invalid" ;
+        return String.valueOf(response.getStatus());
     }
 }

@@ -8,11 +8,11 @@ public class Validations {
 
 
     public static void validateUser(String user, String pass, String key) throws JsonProcessingException {
-        Boolean signUpOk = SignUpConnector.postSignUp(key, user, pass);
+        String status = SignUpConnector.postSignUp(key, user, pass);
         if (!userContainSpaces(user) && userContainNumbers(user) && userContainsFirstCharacterLetter(user)) {
-            assertEquals(signUpOk, true);
+            assertEquals(Integer.parseInt(status), 201);
         } else {
-            assertEquals(signUpOk, false);
+            assertEquals(Integer.parseInt(status), 400);
         }
     }
 

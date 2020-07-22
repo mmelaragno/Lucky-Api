@@ -12,5 +12,5 @@ Feature: Create a user with his profile
     Examples:
     |  user              |      password    |      user2    |
     |  User1             |      222222      |       user    |
-    |  User12a           |      222222a     |      User1      |
+    |  User12a           |      222222a     |      User1    |
 

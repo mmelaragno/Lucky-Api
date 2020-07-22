@@ -5,6 +5,7 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -16,7 +17,7 @@ public class SignUpConnector {
     private static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(ProfileConnector.class));
 
 
-    public static Boolean postSignUp(String key, String userName, String passWord) throws JsonProcessingException {
+    public static String postSignUp(String key, String userName, String passWord) throws JsonProcessingException {
         String url = String.format(SIGNUP_URL, key);
         Map<String, Object> fields = new HashMap<>();
         fields.put("username", userName);
@@ -34,7 +35,7 @@ public class SignUpConnector {
         switch (response.getStatus()) {
             case 201:
                 LOGGER.info("Status is CREATED");
-                return true;
+               break;
             case 400:
                 LOGGER.info("Status is NOT_ACCEPTED , CAUSES: Request body not valid ");
                 break;
@@ -52,7 +53,7 @@ public class SignUpConnector {
 
         }
 
-        return false;
+        return String.valueOf(response.getStatus());
 
     }
 }
