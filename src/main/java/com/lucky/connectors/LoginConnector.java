@@ -31,13 +31,14 @@ public class LoginConnector {
                 .asObject(LoginDTO.class);
         Unirest.shutDown();
         LOGGER.info(" ---------LOGIN---------");
-        LOGGER.info(response.getBody().getUser().getId());
-        LOGGER.info(response.getBody().toString());
 
         switch (response.getStatus()) {
             case 200:
                 LOGGER.info("Status is OK");
-                break;
+                LOGGER.info(response.getBody().getUser().getId());
+                LOGGER.info(response.getBody().toString());
+                assertEquals(response.getStatus(), 200);
+                return response.getBody().getToken();
             case 400:
                 LOGGER.info("Status is NOT_ACCEPTED  , CAUSES: Request body not valid ");
                 break;
@@ -52,8 +53,8 @@ public class LoginConnector {
                 break;
         }
 
-        assertEquals(response.getStatus(), 200);
 
-        return response.getBody().getToken();
+
+        return "Token invalid" ;
     }
 }

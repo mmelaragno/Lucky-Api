@@ -53,4 +53,9 @@ public class StepsDefinitions {
         assertEquals(userProfileOk, false);
 
     }
+
+    @Then("Post the user to login with {string} and {string} and check")
+    public void postTheUserToLoginWithAndAndCheck(String user, String pass) {
+              LoginConnector.postLogin(key, user, pass);
+    }
 }

@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
         features = {"src/test/resources/features"},
         plugin = {"json:target/cucumber.json", "html:target/site/cucumber-pretty"},
         glue = {"com.lucky.steps"},
-        tags = {"@CreateUser,@ValidateUsersSignUp,@SendFailureToken"},
+        tags = {"@CreateUser,@ValidateUsersSignUp, @SendFailureToken, @FailLogin"},
         monochrome = true,
         strict = true
 )

@@ -1,7 +1,7 @@
  @SendFailureToken
   Feature: Create a user with his profile
   As a user
-  I want to create a user and validate it
+  I want to create a user and validate it with failure token
 
   Scenario Outline: The user create his profile
     Given Get the api key
