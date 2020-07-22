@@ -45,4 +45,12 @@ public class StepsDefinitions {
     public void postTheKeyToCreateTheUserAndAndValidate(String user, String password) throws JsonProcessingException {
     Validations.validateUser(user, password, key);
     }
+
+
+    @Then("Check the user profile with {string}")
+    public void thenCheckTheUserProfileWith(String tokenFailure) {
+        Boolean userProfileOk = ProfileConnector.getUserProfile(key, tokenFailure);
+        assertEquals(userProfileOk, false);
+
+    }
 }
