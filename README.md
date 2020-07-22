@@ -74,11 +74,16 @@ Examples:
     |            ├── CreateUserFail.feature:This is the negative case, it validates that a user has their username correct with the requested characters.
     |            ├── SendFailureToken.feature:This is the negative case, it validates when the token is not valid
     |            ├── FailLogin.feature:This is the negative case, it validates when the login is not valid
-    |  
+    |            ├──CreateUserWithInvalidBody.feature: This is the negative case, it validates when the user send invalid body
+    |            ├── CreateUserWithInvalidKey.feature: This is the negative case, it validates when the user send invalid key
+    |            ├── LoginFailureKey.feature: : This is the negative case, it validates in login when send invalid key
+    |            ├── SendFailureKeyProfile.feature:  This is the negative case, it validates in profile when send invalid key 
+    |            ├── SendFailureTokenProfile.feature:  This is the negative case, it validates in profile when send invalid token 
     
     
+
 # How to Run
-To run the battery of tests enter the Runner and play class. If I had other tests to run, I can identify them with a tag in that same class. Now the tag @CreateUser ,  @ValidateUsersSignUp , @SendFailureToken  and  @FailLogin is set. 
+To run the battery of tests enter the Runner and play class. If I had other tests to run, I can identify them with a tag in that same class. Now the tags are @CreateUser, @ValidateUsersSignUp, @CreateUserWithInvalidBody, @CreateUserWithInvalidKey , @FailLogin , @LoginFailureKey , @SendFailureKeyProfile and  @SendFailureTokenProfile
 If you want to run the tests separately you can do them by setting a single tag
 
 # How to see in console
